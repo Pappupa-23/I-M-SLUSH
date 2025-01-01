@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'M SLUSH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>
+            I'M SLUSH
+            <img src="logo.jpg" alt="Logo">
+        </h1>
+
+        <!-- เมนูอาหาร -->
+        <div class="menu">
+            <div class="menu-item">
+                <img src="burger.jpg" alt="เบอร์เกอร์ไก่">
+                <p>เบอร์เกอร์ไก่</p>
+                <input type="number" id="quantity-เบอร์เกอร์ไก่" min="1" value="1">
+                <button onclick="addToCart('เบอร์เกอร์ไก่')">เพิ่ม</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="peach-tea.jpg" alt="ชาพีชสเลอปี้">
+                <p>ชาพีชสเลอปี้</p>
+                <input type="number" id="quantity-ชาพีชสเลอปี้" min="1" value="1">
+                <button onclick="addToCart('ชาพีชสเลอปี้')">เพิ่ม</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="milk.jpg" alt="นมฮอกไกโด">
+                <p>นมฮอกไกโด</p>
+                <input type="number" id="quantity-นมฮอกไกโด" min="1" value="1">
+                <button onclick="addToCart('นมฮอกไกโด')">เพิ่ม</button>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2>รายการสั่งซื้อ</h2>
+            <div id="orderList" class="order-list">
+                <!-- รายการที่เพิ่มจะปรากฏที่นี่ -->
+            </div>
+            <div class="order-total" id="orderTotal">
+                <!-- ยอดรวมจะถูกคำนวณที่นี่ -->
+            </div>
+            <button class="confirm-order" onclick="confirmOrder()">ยืนยันการสั่งซื้อ</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
